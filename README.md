@@ -4,11 +4,20 @@
 monerorequest-kotlin is an easy way to create/decode [Monero Payment Requests](https://github.com/lukeprofits/Monero_Payment_Request_Standard).
 
 
-# How To Use:
-* Install this package: (COMING SOON)
-* Import it at the top of your project: (COMING SOON)
-* Use: `makeMoneroPaymentRequest()`
-* Or use: `decodeMoneroPaymentRequest()`
+# How To Use
+`monerorequest-kotlin` provides easy-to-use functions for creating and decoding Monero Payment Requests. While the package is not yet available on Maven Central, you can integrate it into your project by following these steps:
+
+1. **Download the Source Code:**
+   - Clone this repository or download the source code as a ZIP file.
+   - Extract and locate the `monerorequest-kotlin` source files (usually found in the `src` directory).
+
+2. **Include in Your Kotlin Project:**
+   - Manually copy the source files into your project's `src` directory, ensuring they are placed within the appropriate package structure.
+
+3. **Usage:**
+   - After including the library, you can use its primary functions in your project:
+     - `makeMoneroPaymentRequest()`: To create a Monero Payment Request.
+     - `decodeMoneroPaymentRequest()`: To decode an existing Monero Payment Request.
 
 
 # Example Usage:
