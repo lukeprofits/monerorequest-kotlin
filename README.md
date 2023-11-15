@@ -58,7 +58,7 @@ var moneroPaymentRequestData = decodeMoneroPaymentRequest(moneroPaymentRequest =
 * If `version` is left blank, the latest version will be used.
 
 
-# Supplimental Functions: 
+# Supplemental Functions: 
 * Generate a random payment_id: `makeRandomPaymentId()`
 * Create an RFC3339 timestamp for `startDate` from a ZonedDateTime object: `convertToTruncatedRFC3339(zonedDateTime)`
 * Print the Monero logo to console: `printMoneroLogo()`
