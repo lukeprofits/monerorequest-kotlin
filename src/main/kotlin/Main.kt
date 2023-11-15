@@ -71,10 +71,10 @@ fun makeRandomPaymentId(): String {
 }
 
 
-fun convertToTruncatedRFC3339(datetime: ZonedDateTime): String {
+fun convertToTruncatedRFC3339(zonedDateTime: ZonedDateTime): String {
     // Convert the input datetime to UTC. This step is crucial to standardize the time representation,
     // especially if the original datetime is in a different timezone.
-    val utcDateTime = datetime.withZoneSameInstant(ZoneOffset.UTC)
+    val utcDateTime = zonedDateTime.withZoneSameInstant(ZoneOffset.UTC)
 
     // Define the formatter with a pattern that matches the RFC3339 standard.
     // This pattern includes up to milliseconds ('.SSS').
@@ -90,7 +90,6 @@ fun convertToTruncatedRFC3339(datetime: ZonedDateTime): String {
     // and then append a 'Z' to denote UTC time explicitly.
     // This results in a string with millisecond precision.
     val final = formattedDateTime.substring(0, formattedDateTime.length - 3) + "Z"
-    println(final)
     return final
 }
 
@@ -124,7 +123,7 @@ fun makeMoneroPaymentRequest(customLabel: String = "Unlabeled Monero Payment Req
     if (!Check.daysPerBillingCycle(daysPerBillingCycle)) throw IllegalArgumentException("billing_cycle is not an integer, or the value set was lower than 0.")
     if (!Check.numberOfPayments(numberOfPayments)) throw IllegalArgumentException("number_of_payments is not an integer, or is less than 1.")
     if (!Check.changeIndicatorUrl(changeIndicatorUrl)) throw IllegalArgumentException("change_indicator_url is not a string, or is not a valid URL.")
-    println(StartDate)
+
     val jsonData = mapOf(
         "custom_label" to customLabel,
         "sellers_wallet" to sellersWallet,
@@ -354,16 +353,17 @@ object Check {
 """
 fun main() {
     var monero_payment_request = makeMoneroPaymentRequest(
-        customLabel="Unlabeled Monero Payment Request",
-        sellersWallet="4At3X5rvVypTofgmueN9s9QtrzdRe5BueFrskAZi17BoYbhzysozzoMFB6zWnTKdGC6AxEAbEE5czFR3hbEEJbsm4hCeX2S",
-        currency="USD",
-        amount="24.99",
-        paymentId="0aff662b3151e624",
-        startDate="2023-11-15T09:07:59.019Z",
+        customLabel = "Unlabeled Monero Payment Request",
+        sellersWallet = "4At3X5rvVypTofgmueN9s9QtrzdRe5BueFrskAZi17BoYbhzysozzoMFB6zWnTKdGC6AxEAbEE5czFR3hbEEJbsm4hCeX2S",
+        currency = "USD",
+        amount = "24.99",
+        paymentId = "0aff662b3151e624",
+        startDate = "2023-11-15T09:07:59.019Z",
         daysPerBillingCycle = 30,
         numberOfPayments = 1,
-        changeIndicatorUrl ="")
-    println(monero_payment_request)
+        changeIndicatorUrl = "")
+    println(monero_payment_request
+    )
 
 
     var mpr = "monero-request:1:H4sIAAAAAAAC/y1QyU7DMBD9lcrntkriOFVyS0uKBCqCLlB6sex40kQkdvECJIh/xymc5i0z8zTzjVinnLQoQxGZpymaorJm8gy0kaIpmVWaOt16e3Sc1iDL3rPD7uYqGKs62jIOY8tBXhGIyUZJ0GryyPoOpJ1s4d2BsX5CsN7QC2jKm7Zt5JmWfdkCynAwRdJ13Duqope/OYMyL/8T2ggfEbCqSpKI45CEkESxX2mgbUEb+sl8HQ+Jc4uPRH8895e9qs6dg4fUpE9WD2ILZOlgrc1bfmrCxVK98nrojRoGtVkvk+FF7u/F7SrJv4qcFwUph/UW1x7dcdPF9QqO0W6MtExbKpiF8W9BhGdhMIuSfRBnhGR4MY9jfEI/vzFHmeFdAQAA"
