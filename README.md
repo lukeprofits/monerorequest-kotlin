@@ -64,8 +64,8 @@ var moneroPaymentRequestData = decodeMoneroPaymentRequest(moneroPaymentRequest =
 </a><br>
 
 ## Requirements
-- Java Development Kit (JDK) 8 or above: [Download JDK](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html)
-- Kotlin 1.3 or above (if compiling from source): [Kotlin Releases](https://github.com/JetBrains/kotlin/releases)
+- [Java Development Kit (JDK) 8](https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html) or above
+- [Kotlin 1.3](https://github.com/JetBrains/kotlin/releases) or above (if compiling from source)
 
 
 ## License
