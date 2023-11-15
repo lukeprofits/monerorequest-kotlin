@@ -22,7 +22,7 @@ monerorequest-kotlin is an easy way to create/decode [Monero Payment Requests](h
 
 # Example Usage:
 * To create a Monero Payment Request:
-```
+``` kotlin
 var moneroPaymentRequest = makeMoneroPaymentRequest(
         customLabel = "Unlabeled Monero Payment Request",
         sellersWallet = "4At3X5rvVypTofgmueN9s9QtrzdRe5BueFrskAZi17BoYbhzysozzoMFB6zWnTKdGC6AxEAbEE5czFR3hbEEJbsm4hCeX2S",
@@ -38,7 +38,7 @@ var moneroPaymentRequest = makeMoneroPaymentRequest(
 ```
 
 * To decode a Monero Payment Request:
-```
+``` kotlin
 var moneroPaymentRequestData = decodeMoneroPaymentRequest(moneroPaymentRequest = "monero-request:1:H4sIAAAAAAAC/y1QyU7DMBD9lcrntkriOFVyS0uKBCqCLlB6sex40kQkdvECJIh/xymc5i0z8zTzjVinnLQoQxGZpymaorJm8gy0kaIpmVWaOt16e3Sc1iDL3rPD7uYqGKs62jIOY8tBXhGIyUZJ0GryyPoOpJ1s4d2BsX5CsN7QC2jKm7Zt5JmWfdkCynAwRdJ13Duqope/OYMyL/8T2ggfEbCqSpKI45CEkESxX2mgbUEb+sl8HQ+Jc4uPRH8895e9qs6dg4fUpE9WD2ILZOlgrc1bfmrCxVK98nrojRoGtVkvk+FF7u/F7SrJv4qcFwUph/UW1x7dcdPF9QqO0W6MtExbKpiF8W9BhGdhMIuSfRBnhGR4MY9jfEI/vzFHmeFdAQAA")
 ```
 
