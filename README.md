@@ -1,6 +1,6 @@
 # monerorequest-kotlin
 ![Version 1.0](https://img.shields.io/badge/Version-1.0.0-orange.svg)
-![Python 3.8+](https://img.shields.io/badge/Python-3.8+-3776ab.svg)
+![Kotlin 1.3+](https://img.shields.io/badge/Kotlin-1.3+-3776ab.svg)
 monerorequest-kotlin is an easy way to create/decode [Monero Payment Requests](https://github.com/lukeprofits/Monero_Payment_Request_Standard).
 
 
